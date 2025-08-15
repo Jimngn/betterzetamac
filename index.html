@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Arithmetic Game</h1>
+        <p class="description">
+            The Arithmetic Game is a fast-paced speed drill where you are given 
+            two minutes to solve as many arithmetic problems as you can.
+        </p>
+        <p class="contact">
+            Inspired by zetamac but with an little bit of extra functionality for timestable practice. 
+        </p>
+
+        <form id="gameSetup">
+            <div class="operation-group">
+                <label>
+                    <input type="checkbox" name="operations" value="addition" checked>
+                    Addition
+                </label>
+                <div class="range-controls" id="additionRange">
+                    Range: (
+                    <input type="number" name="additionMin1" value="2" min="0" max="99">
+                    to
+                    <input type="number" name="additionMax1" value="100" min="1" max="100">
+                    ) + (
+                    <input type="number" name="additionMin2" value="2" min="0" max="99">
+                    to
+                    <input type="number" name="additionMax2" value="100" min="1" max="100">
+                    )
+                </div>
+            </div>
+
+            <div class="operation-group">
+                <label>
+                    <input type="checkbox" name="operations" value="subtraction" checked>
+                    Subtraction
+                </label>
+                <div class="description">Addition problems in reverse.</div>
+            </div>
+
+            <div class="operation-group">
+                <label>
+                    <input type="checkbox" name="operations" value="multiplication" checked>
+                    Multiplication
+                </label>
+                <div class="range-controls" id="multiplicationRange">
+                    Range: (
+                    <input type="number" name="multiplicationMin1" value="2" min="0" max="99">
+                    to
+                    <input type="number" name="multiplicationMax1" value="12" min="1" max="100">
+                    ) × (
+                    <input type="number" name="multiplicationMin2" value="2" min="0" max="99">
+                    to
+                    <input type="number" name="multiplicationMax2" value="100" min="1" max="100">
+                    )
+                </div>
+            </div>
+
+            <div class="operation-group">
+                <label>
+                    <input type="checkbox" name="operations" value="division" checked>
+                    Division
+                </label>
+                <div class="description">Multiplication problems in reverse.</div>
+            </div>
+
+            <!-- New Times Table Practice Section -->
+            <div class="operation-group times-table-group">
+                <h3>Times Table Practice</h3>
+                <label>
+                    <input type="checkbox" name="operations" value="timesTable" id="timesTableToggle">
+                    Practice specific times table
+                </label>
+                <div class="times-table-controls" id="timesTableControls" style="display: none;">
+                    <div class="times-table-number">
+                        Practice the 
+                        <select name="timesTableNumber" id="timesTableNumber">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        times table
+                    </div>
+                    <div class="times-table-options">
+                        <label>
+                            <input type="checkbox" name="timesTableDirection" value="forward" checked>
+                            Include forward (e.g., 3 × 1-12)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="timesTableDirection" value="reverse" checked>
+                            Include reverse (e.g., 1-12 × 3)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="timesTableDirection" value="division">
+                            Include division (e.g., 3 ÷ 1, 6 ÷ 3, etc.)
+                        </label>
+                    </div>
+                    <div class="times-table-range">
+                        Range: 1 to 
+                        <input type="number" name="timesTableRange" value="12" min="2" max="20">
+                    </div>
+                </div>
+            </div>
+
+            <div class="duration-group">
+                <label for="duration">Duration:</label>
+                <select name="duration" id="duration">
+                    <option value="30">30 seconds</option>
+                    <option value="60">60 seconds</option>
+                    <option value="120" selected>120 seconds</option>
+                    <option value="300">300 seconds</option>
+                    <option value="600">600 seconds</option>
+                </select>
+            </div>
+
+            <button type="submit" class="start-button">Start</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

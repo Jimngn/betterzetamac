@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.contact {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.contact a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+#gameSetup {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.operation-group {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.operation-group label {
+    font-weight: bold;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.operation-group input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.range-controls {
+    margin-left: 20px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.range-controls input[type="number"] {
+    width: 60px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.operation-group .description {
+    margin-left: 20px;
+    margin-bottom: 0;
+    font-style: italic;
+    color: #777;
+    text-align: left;
+}
+
+/* Times Table Specific Styles */
+.times-table-group {
+    background-color: #e8f4f8;
+    border-color: #4a9eff;
+}
+
+.times-table-group h3 {
+    margin-bottom: 10px;
+    color: #2c5aa0;
+    font-size: 1.2em;
+}
+
+.times-table-controls {
+    margin-left: 20px;
+}
+
+.times-table-number {
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.times-table-number select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1em;
+    margin: 0 8px;
+}
+
+.times-table-options {
+    margin-bottom: 15px;
+}
+
+.times-table-options label {
+    font-weight: normal;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.times-table-options input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1);
+}
+
+.times-table-range {
+    font-size: 0.95em;
+}
+
+.times-table-range input[type="number"] {
+    width: 60px;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.duration-group {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.duration-group label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+
+.duration-group select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: white;
+}
+
+.start-button {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #45a049;
+}
+
+.start-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Game Screen Styles */
+.game-container {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.game-header {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.exit-btn {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.exit-btn:hover {
+    background-color: #5a6268;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+.stat {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.problem {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.answer-input {
+    font-size: 2em;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.answer-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.answer-input.correct {
+    border-color: #4CAF50;
+    background-color: #e8f5e8;
+}
+
+.answer-input.incorrect {
+    border-color: #f44336;
+    background-color: #fde8e8;
+}
+
+.game-over {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.game-over button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.try-again-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.change-settings-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.try-again-btn:hover {
+    background-color: #45a049;
+}
+
+.change-settings-btn:hover {
+    background-color: #1976D2;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .problem {
+        font-size: 2.5em;
+    }
+    
+    .answer-input {
+        font-size: 1.8em;
+        width: 180px;
+    }
+    
+    .game-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
