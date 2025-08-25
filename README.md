@@ -1,6 +1,8 @@
 # Zetamac Arithmetic Game Clone
 
-A faithful recreation of the popular Zetamac arithmetic speed drill with enhanced times table practice features.
+A recreation of the popular Zetamac arithmetic speed drill with times table practice features cause I suck at it. 
+
+[Link if you want to play online] https://zetamac-omega.vercel.app/ 
 
 ## Features
 
